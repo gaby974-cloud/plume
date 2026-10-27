@@ -27,14 +27,19 @@ class ModeConfig(
         .replace("{TACHE}", mode.task)
 
     companion object {
-        fun load(context: Context, file: String = "modes.json"): ModeConfig {
-            val json = context.assets.open(file).bufferedReader(Charsets.UTF_8).use { it.readText() }
-            val root = JSONObject(json)
+        /**
+         * [extraFile] : modes personnels facultatifs ({ "modes": [...] }), ajoutés à la fin du menu.
+         * Ils ne sont présents que dans une version compilée avec -Pperso (voir app/build.gradle.kts).
+         */
+        fun load(context: Context, file: String = "modes.json", extraFile: String? = null): ModeConfig {
+            val root = JSONObject(readAsset(context, file) ?: error("$file introuvable"))
             val sources = root.getJSONObject("sources")
-            val arr = root.getJSONArray("modes")
-            val modes = (0 until arr.length()).map {
-                val m = arr.getJSONObject(it)
-                Mode(m.getString("id"), m.getString("label"), m.getString("task"))
+            val extra = extraFile?.let { readAsset(context, it) }?.let { JSONObject(it).getJSONArray("modes") }
+            val modes = listOfNotNull(root.getJSONArray("modes"), extra).flatMap { arr ->
+                (0 until arr.length()).map {
+                    val m = arr.getJSONObject(it)
+                    Mode(m.getString("id"), m.getString("label"), m.getString("task"))
+                }
             }
             require(modes.isNotEmpty()) { "$file ne contient aucun mode" }
             return ModeConfig(
@@ -44,6 +49,12 @@ class ModeConfig(
                 root.optString("datePattern", "EEEE d MMMM yyyy"),
                 modes,
             )
+        }
+
+        private fun readAsset(context: Context, file: String): String? = try {
+            context.assets.open(file).bufferedReader(Charsets.UTF_8).use { it.readText() }
+        } catch (e: java.io.FileNotFoundException) {
+            null
         }
     }
 }

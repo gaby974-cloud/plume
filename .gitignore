@@ -11,3 +11,5 @@ keystore/
 *.jks
 *.keystore
 release/
+# Modes personnels de Claude, jamais publiés (voir README.fr.md)
+app/perso/

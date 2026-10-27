@@ -90,6 +90,12 @@ android {
     testOptions {
         unitTests.isReturnDefaultValues = true
     }
+
+    // Modes personnels de Claude (app/perso/assets/modes-perso.json et modes-perso-en.json, hors dépôt),
+    // inclus seulement quand on compile avec -Pperso : les versions publiques n'en contiennent jamais.
+    if (project.hasProperty("perso")) {
+        sourceSets.getByName("main").assets.srcDir("perso/assets")
+    }
 }
 
 ksp {

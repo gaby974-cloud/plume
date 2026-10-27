@@ -41,7 +41,7 @@ class CarnetApp : Application() {
         repository = NotesRepository(AppDatabase.create(this))
         settings = AppSettings(this)
         Lang.apply(settings.language)
-        modesFr = ModeConfig.load(this)
-        modesEn = ModeConfig.load(this, "modes-en.json")
+        modesFr = ModeConfig.load(this, extraFile = "modes-perso.json")
+        modesEn = ModeConfig.load(this, "modes-en.json", "modes-perso-en.json")
     }
 }

@@ -115,6 +115,8 @@ Les règles de dessin (encre bleue, cases assez grandes pour écrire, texte lisi
 
 Les modes et le prompt de base sont dans [app/src/main/assets/modes.json](app/src/main/assets/modes.json). Ajouter un objet `{ "id", "label", "task" }` au tableau `modes`, recompiler : le mode apparaît dans le menu.
 
+**Modes personnels, non publiés :** les placer dans `app/perso/assets/modes-perso.json` (et `modes-perso-en.json`), au format `{ "modes": [ … ] }`. Ce dossier est ignoré par git. Ils ne sont inclus que dans une version compilée avec `-Pperso` (par exemple `./gradlew assembleDebug -Pperso`) et s'ajoutent à la fin du menu ; une compilation normale n'en contient jamais.
+
 ## Retrouver ses carnets sur l'ordinateur : Google Drive
 
 Chaque carnet est copié en PDF quand on le quitte (ou quand l'application passe en arrière-plan) :
