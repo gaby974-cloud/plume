@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plume</title>
+<meta name="description" content="Plume, carnet de notes manuscrites pour liseuse Boox, avec Claude intégré.">
+<style>
+  :root { --bg: #fbfaf7; --ink: #1a1a1a; --muted: #5b5b5b; --accent: #1b4ea3; --line: #d9d6cf; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141414; --ink: #ecebe8; --muted: #a8a6a1; --accent: #8fb0ea; --line: #333; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.6 Georgia, "Times New Roman", serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  .lang { text-align: right; font-size: 16px; margin: 0 0 8px; }
+  h1 { font-size: 44px; margin: 0 0 4px; letter-spacing: -0.5px; }
+  .tag { color: var(--muted); margin: 0 0 28px; font-size: 20px; }
+  h2 { font-size: 22px; margin: 36px 0 8px; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--accent); }
+  .download { display: inline-block; padding: 14px 26px; border: 3px solid var(--ink); background: var(--ink); color: var(--bg);
+    font: bold 20px/1.2 system-ui, sans-serif; text-decoration: none; }
+  .small { color: var(--muted); font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><a href="./" hreflang="en">English</a></p>
+  <h1>Plume</h1>
+  <p class="tag">Carnet de notes manuscrites pour liseuse Boox, avec Claude intégré.</p>
+
+  <p>On écrit au stylet comme sur du papier, puis on demande à Claude de transcrire, résumer, structurer ou continuer
+    ses notes, ou de dessiner un tableau, un schéma ou un calendrier à remplir à la main. Les réponses se posent sur la page,
+    en bleu, sous votre écriture.</p>
+
+  <p><a class="download" href="https://github.com/gaby974-cloud/plume/releases/latest/download/Plume.apk">Télécharger Plume (APK)</a></p>
+  <p class="small">Dernière version et nouveautés : <a href="https://github.com/gaby974-cloud/plume/releases">versions sur GitHub</a>.
+    Interface en français et en anglais.</p>
+
+  <h2>Fonctions</h2>
+  <ul>
+    <li>Écriture au stylet à faible latence sur Boox (SDK stylet Onyx), stylos, surligneur et gomme ; un mot raturé s'efface.</li>
+    <li>Carnets en pages successives ou en page infinie.</li>
+    <li>Sélection à la zone ou au lasso : déplacer, recolorer, redimensionner, dupliquer, supprimer, ou n'envoyer que cette partie à Claude.</li>
+    <li>Modes de Claude : Auto (suit une consigne écrite sur la page, sinon transcrit), Transcrire, Résumer, Continuer,
+      Structurer, Schéma, Tableau à remplir, Calendrier, Vérifier, etc.</li>
+    <li>Export PNG et PDF ; copie PDF automatique de chaque carnet dans un dossier « Plume » de votre Google Drive, si vous le souhaitez.</li>
+  </ul>
+
+  <h2>Installation</h2>
+  <ol>
+    <li>Téléchargez l'APK sur la liseuse (ou copiez-le par USB ou BooxDrop).</li>
+    <li>Ouvrez-le et autorisez l'installation depuis cette source quand Android le demande.</li>
+    <li>Dans Plume, ouvrez les Réglages et collez votre clé API Anthropic
+      (à créer sur <a href="https://console.anthropic.com">console.anthropic.com</a>).</li>
+  </ol>
+
+  <h2>Bon à savoir</h2>
+  <ul>
+    <li>Android 11 ou plus récent. Conçu pour Boox, testé sur Boox Note Air C. Fonctionne sur d'autres tablettes Android,
+      sans le stylet à faible latence.</li>
+    <li>Vous utilisez votre propre clé API Anthropic. L'usage de Claude est facturé par Anthropic, en dehors de tout abonnement Claude.</li>
+    <li>Vos notes restent sur votre liseuse. Plume n'a ni serveur, ni compte, ni statistiques.
+      Détails dans les <a href="confidentialite.html">règles de confidentialité</a>.</li>
+    <li>Bugs et idées : <a href="https://github.com/gaby974-cloud/plume/issues">ouvrez un ticket</a>.</li>
+  </ul>
+
+  <footer>
+    Plume est un projet indépendant, sans lien avec Onyx (Boox), Anthropic ou Google.<br>
+    <a href="confidentialite.html">Règles de confidentialité</a> · <a href="privacy.html" hreflang="en">Privacy policy</a> ·
+    <a href="https://github.com/gaby974-cloud/plume">GitHub</a>
+  </footer>
+</main>
+</body>
+</html>

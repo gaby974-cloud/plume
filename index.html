@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Plume</title>
-<meta name="description" content="Plume, carnet de notes manuscrites pour liseuse Boox, avec l'aide de Claude.">
+<meta name="description" content="Plume, a handwriting notebook for Boox e-ink tablets, with Claude built in.">
 <style>
   :root { --bg: #fbfaf7; --ink: #1a1a1a; --muted: #5b5b5b; --accent: #1b4ea3; --line: #d9d6cf; }
   @media (prefers-color-scheme: dark) {
@@ -13,42 +13,64 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.6 Georgia, "Times New Roman", serif; }
   main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  .lang { text-align: right; font-size: 16px; margin: 0 0 8px; }
   h1 { font-size: 44px; margin: 0 0 4px; letter-spacing: -0.5px; }
-  .tag { color: var(--muted); margin: 0 0 32px; font-size: 20px; }
+  .tag { color: var(--muted); margin: 0 0 28px; font-size: 20px; }
   h2 { font-size: 22px; margin: 36px 0 8px; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
-  ul { padding-left: 22px; }
+  ul, ol { padding-left: 22px; }
   li { margin: 6px 0; }
   a { color: var(--accent); }
+  .download { display: inline-block; padding: 14px 26px; border: 3px solid var(--ink); background: var(--ink); color: var(--bg);
+    font: bold 20px/1.2 system-ui, sans-serif; text-decoration: none; }
+  .small { color: var(--muted); font-size: 16px; }
   footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 16px; }
 </style>
 </head>
 <body>
 <main>
+  <p class="lang"><a href="fr.html" hreflang="fr">Version française</a></p>
   <h1>Plume</h1>
-  <p class="tag">Carnet de notes manuscrites pour liseuse Boox, avec l'aide de Claude.</p>
+  <p class="tag">A handwriting notebook for Boox e-ink tablets, with Claude built in.</p>
 
-  <p>Plume est une application Android personnelle pour la Boox Note Air C. On y écrit au stylet comme sur du
-    papier, et on peut demander à Claude (Anthropic) de transcrire, résumer, structurer ou compléter ses notes,
-    ou de dessiner un tableau, un schéma ou un calendrier à remplir à la main.</p>
+  <p>Write with the stylus as on paper, then ask Claude to transcribe, summarize, structure or continue your notes,
+    or to draw a table, diagram or calendar that you fill in by hand. Answers are placed on the page, in blue, under your writing.</p>
 
-  <h2>Fonctions</h2>
+  <p><a class="download" href="https://github.com/gaby974-cloud/plume/releases/latest/download/Plume.apk">Download Plume (APK)</a></p>
+  <p class="small">Latest version and release notes: <a href="https://github.com/gaby974-cloud/plume/releases">GitHub releases</a>.
+    Interface in English and French.</p>
+
+  <h2>Features</h2>
   <ul>
-    <li>Écriture au stylet à faible latence, stylos, surligneur et gomme ; un mot raturé s'efface.</li>
-    <li>Carnets en pages successives ou en page infinie.</li>
-    <li>Sélection à la zone ou au lasso : déplacer, recolorer, dupliquer, supprimer.</li>
-    <li>Réponses de Claude posées sur la page, sous vos notes.</li>
-    <li>Export PNG et PDF ; copie PDF automatique de chaque carnet sur la liseuse et, si vous le souhaitez,
-      dans un dossier « Plume » de votre Google Drive.</li>
+    <li>Low-latency stylus writing on Boox (Onyx pen SDK), pens, highlighter and eraser; scribble over a word to erase it.</li>
+    <li>Notebooks with pages, or a single infinite page.</li>
+    <li>Area and lasso selection: move, recolor, resize, duplicate, delete, or send only that part to Claude.</li>
+    <li>Claude modes: Auto (follows an instruction written on the page, otherwise transcribes), Transcribe, Summarize,
+      Continue, Structure, Diagram, Table to fill in, Calendar, Check, and more.</li>
+    <li>PNG and PDF export; optional automatic PDF copy of each notebook to a "Plume" folder in your Google Drive.</li>
   </ul>
 
-  <h2>Google Drive</h2>
-  <p>La connexion à Google Drive est facultative. Plume demande seulement l'accès aux fichiers qu'il crée
-    lui-même (autorisation <code>drive.file</code>) : il ne voit ni ne modifie aucun autre fichier de votre Drive.
-    Détails dans les <a href="confidentialite.html">règles de confidentialité</a>.</p>
+  <h2>Install</h2>
+  <ol>
+    <li>Download the APK on your tablet (or copy it over with USB or BooxDrop).</li>
+    <li>Open it and allow installing apps from this source when Android asks.</li>
+    <li>In Plume, open Settings and paste your Anthropic API key
+      (create one at <a href="https://console.anthropic.com">console.anthropic.com</a>).</li>
+  </ol>
+
+  <h2>Good to know</h2>
+  <ul>
+    <li>Requires Android 11 or later. Built for Boox; tested on a Boox Note Air C. Other Android tablets work,
+      without the low-latency pen.</li>
+    <li>You use your own Anthropic API key. Claude usage is billed by Anthropic per use, separately from any Claude subscription.</li>
+    <li>Your notes stay on your tablet. Plume has no server, no account and no analytics.
+      Details in the <a href="privacy.html">privacy policy</a>.</li>
+    <li>Bugs and ideas: <a href="https://github.com/gaby974-cloud/plume/issues">open an issue</a>.</li>
+  </ul>
 
   <footer>
-    <a href="confidentialite.html">Règles de confidentialité</a> ·
-    <a href="https://github.com/gaby974-cloud/plume">Projet sur GitHub</a>
+    Plume is an independent project, not affiliated with Onyx (Boox), Anthropic or Google.<br>
+    <a href="privacy.html">Privacy policy</a> · <a href="confidentialite.html" hreflang="fr">Règles de confidentialité</a> ·
+    <a href="https://github.com/gaby974-cloud/plume">GitHub</a>
   </footer>
 </main>
 </body>
