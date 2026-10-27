@@ -1,0 +1,2 @@
+-keep class com.onyx.** { *; }
+-dontwarn com.onyx.**
