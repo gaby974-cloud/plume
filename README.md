@@ -1,6 +1,6 @@
-# Plume
+# Plume · Handwriting + Claude
 
-A handwriting notebook for Boox e-ink tablets, with Claude built in. Interface in English and French.
+A handwriting notebook for Boox e-ink tablets, with Claude built in. Interface in English and French. On the tablet, the app is simply called **Plume**.
 
 Write with the stylus as on paper, then ask Claude to transcribe, summarize, structure or continue your notes, or to draw a table, diagram or calendar you fill in by hand.
 
