@@ -23,7 +23,7 @@ Write with the stylus as on paper, then ask Claude to transcribe, summarize, str
 - Notes stay on your tablet. No server, no account, no analytics.
 - Google Drive backup (PDF copies) is optional.
 
-**Shared as-is.** I fix major bugs when I can, but I don't take feature requests or offer support. Found a serious bug? [Open an issue](https://github.com/gaby974-cloud/plume/issues). Want more? Feel free to fork it.
+**Shared as-is**, with no support and no feature requests. Feel free to fork it.
 
 ## Build from source
 
