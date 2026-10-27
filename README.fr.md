@@ -64,7 +64,7 @@ Une colonne de grandes icônes légendées en gras sur le côté (à gauche par 
 | ↶ ↷ | Annuler / rétablir, sans limite, sur la page courante. |
 | ˄ ˅ Défiler | Défilement d'un écran (page infinie, ou page allongée par une réponse). |
 | Claude | Envoie la page (ou la zone) et ouvre le panneau de réponse. |
-| Mode ▾ | Auto, Transcrire, Résumer, Continuer, Structurer, Schéma, Tableau à remplir, Calendrier, Vérifier, Plan vidéo, Journal de trade. |
+| Mode ▾ | Auto, Transcrire, Résumer, Continuer, Structurer, Schéma, Tableau à remplir, Calendrier, Vérifier. |
 | Menu | Nom du carnet ✎ (un appui pour le renommer), historique des 8 dernières réponses, export PNG / PDF, suppression de page, masquer la barre, réglages. |
 
 **Stylo couleurs** : noir, rouge, bleu, vert, orange, violet ; fin, moyen, épais, très épais ; le trait varie avec la pression. **Surligneur** : jaune, vert, rose, bleu, orange ; fin, moyen, large ; il passe sous l'encre.
@@ -107,7 +107,7 @@ En mode Auto, écrire par exemple `→ résume`, `-> traduis en anglais` ou `@cl
 
 ### Schémas, tableaux, calendriers
 
-Quand la demande appelle un visuel (`→ fais-moi un calendrier de novembre`, `→ tableau pour suivre mes trades`, `→ schéma de ce plan`, ou les modes **Schéma**, **Tableau à remplir** et **Calendrier**), Claude répond par un dessin vectoriel (SVG) au lieu de texte. Le panneau en montre l'aperçu ; « Poser sur la page » le pose en bleu sous la zone ou sous le contenu. On écrit dans ses cases au stylet, on le déplace, l'agrandit ou le supprime au lasso, on l'efface à la gomme. Claude connaît la date du jour, pour des calendriers justes.
+Quand la demande appelle un visuel (`→ fais-moi un calendrier de novembre`, `→ tableau pour suivre mes dépenses`, `→ schéma de ce plan`, ou les modes **Schéma**, **Tableau à remplir** et **Calendrier**), Claude répond par un dessin vectoriel (SVG) au lieu de texte. Le panneau en montre l'aperçu ; « Poser sur la page » le pose en bleu sous la zone ou sous le contenu. On écrit dans ses cases au stylet, on le déplace, l'agrandit ou le supprime au lasso, on l'efface à la gomme. Claude connaît la date du jour, pour des calendriers justes.
 
 Les règles de dessin (encre bleue, cases assez grandes pour écrire, texte lisible sur encre électronique) sont dans le prompt de [modes.json](app/src/main/assets/modes.json). Le rendu utilise la bibliothèque AndroidSVG, qui n'exécute aucun script et ne charge rien d'extérieur.
 

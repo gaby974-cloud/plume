@@ -49,16 +49,6 @@
       "id": "verifier",
       "label": "Vérifier",
       "task": "relis la page de façon critique : erreurs de calcul, de logique ou de faits, points flous, oublis. Liste uniquement les vrais problèmes, chacun avec sa correction. S'il n'y en a aucun, dis-le en une ligne."
-    },
-    {
-      "id": "plan_video",
-      "label": "Plan vidéo",
-      "task": "transforme ces notes en plan de vidéo YouTube : 3 titres possibles, un hook pour les 15 premières secondes, puis les parties de la vidéo avec 1 à 2 lignes chacune."
-    },
-    {
-      "id": "journal_trade",
-      "label": "Journal de trade",
-      "task": "ces notes décrivent un trade ou une analyse de marché. Produis une fiche de journal de trading, une ligne par champ : Date, Instrument, Sens, Entrée, Stop, Objectif, Risque/Rendement (calcule-le si les niveaux sont là), Raison du setup, État émotionnel, Résultat, Leçon. Mets « ? » pour ce qui n'est pas sur la page. Termine par 1 ou 2 remarques sur le respect du plan."
     }
   ]
 }

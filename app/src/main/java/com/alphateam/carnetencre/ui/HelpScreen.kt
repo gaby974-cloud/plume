@@ -91,7 +91,7 @@ private val TOPICS_FR = listOf(
             "Mode Auto : si la page contient une consigne (une ligne qui commence par → ou ->, @claude, un texte entouré, « Claude, … »), Claude l'exécute.",
             "Sans consigne, Auto transcrit votre écriture en texte.",
             "Exemples de consignes : → résume ; → traduis en anglais ; @claude corrige les calculs.",
-            "Mode ▾ : Transcrire, Résumer, Continuer, Structurer, Schéma, Tableau à remplir, Calendrier, Vérifier, Plan vidéo, Journal de trade.",
+            "Mode ▾ : Transcrire, Résumer, Continuer, Structurer, Schéma, Tableau à remplir, Calendrier, Vérifier.",
             "Pour qu'il ne lise qu'une partie, utilisez Zone ou Lasso avant de toucher Claude.",
         ),
     ),
@@ -109,7 +109,7 @@ private val TOPICS_FR = listOf(
     HelpTopic(
         "Schémas, tableaux, calendriers",
         listOf(
-            "Demandez un visuel : → calendrier de novembre ; → tableau pour suivre mes trades ; → schéma de ce plan.",
+            "Demandez un visuel : → calendrier de novembre ; → tableau pour suivre mes dépenses ; → schéma de ce plan.",
             "Ou choisissez le mode Schéma, Tableau à remplir ou Calendrier.",
             "Claude le dessine ; posé sur la page, il est en bleu et vous écrivez dans ses cases au stylet.",
             "Il se déplace, s'agrandit ou se supprime au lasso, et s'efface à la gomme.",
@@ -197,7 +197,7 @@ private val TOPICS_EN = listOf(
             "Auto mode: if the page holds an instruction (a line starting with → or ->, @claude, circled text, \"Claude, …\"), Claude carries it out.",
             "Without an instruction, Auto transcribes your handwriting into text.",
             "Example instructions: → summarize; → translate into French; @claude check the math.",
-            "Mode ▾: Transcribe, Summarize, Continue, Structure, Diagram, Table to fill in, Calendar, Check, Video outline, Trade journal.",
+            "Mode ▾: Transcribe, Summarize, Continue, Structure, Diagram, Table to fill in, Calendar, Check.",
             "To have it read only part of the page, use Area or Lasso before tapping Claude.",
         ),
     ),
@@ -215,7 +215,7 @@ private val TOPICS_EN = listOf(
     HelpTopic(
         "Diagrams, tables, calendars",
         listOf(
-            "Ask for a visual: → November calendar; → table to track my trades; → diagram of this outline.",
+            "Ask for a visual: → November calendar; → table to track my expenses; → diagram of this outline.",
             "Or pick the Diagram, Table to fill in or Calendar mode.",
             "Claude draws it; once placed on the page it is blue and you write in its cells with the stylus.",
             "Move, enlarge or delete it with the lasso; the eraser removes it too.",
