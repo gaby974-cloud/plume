@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plume, confidentialité</title>
+<meta name="description" content="Règles de confidentialité de l'application Plume.">
+<style>
+  :root { --bg: #fbfaf7; --ink: #1a1a1a; --muted: #5b5b5b; --accent: #1b4ea3; --line: #d9d6cf; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141414; --ink: #ecebe8; --muted: #a8a6a1; --accent: #8fb0ea; --line: #333; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.6 Georgia, "Times New Roman", serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 36px; margin: 0 0 4px; }
+  .tag { color: var(--muted); margin: 0 0 32px; }
+  h2 { font-size: 22px; margin: 36px 0 8px; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--accent); }
+  code { overflow-wrap: anywhere; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Règles de confidentialité</h1>
+  <p class="tag">Application Plume · en vigueur depuis le 27 octobre 2026</p>
+
+  <p>Plume est une application Android personnelle de prise de notes manuscrites. Elle n'a ni serveur, ni compte
+    utilisateur, ni publicité, ni outil de mesure d'audience. Le développeur ne reçoit aucune de vos données.</p>
+
+  <h2>Ce qui reste sur votre appareil</h2>
+  <ul>
+    <li>Vos carnets, pages et tracés sont enregistrés uniquement dans la mémoire de l'application, sur votre liseuse.</li>
+    <li>Votre clé API Anthropic et votre accès Google Drive sont chiffrés avec le magasin de clés d'Android
+      et ne quittent pas l'appareil, sauf vers le service concerné (ci-dessous).</li>
+  </ul>
+
+  <h2>Claude (Anthropic)</h2>
+  <p>Quand vous touchez le bouton Claude, et seulement à ce moment-là, Plume envoie une image de la page (ou de la
+    zone sélectionnée) et votre consigne à l'API d'Anthropic (<code>api.anthropic.com</code>), avec votre propre clé API.
+    Ces données sont traitées par Anthropic selon ses propres conditions et règles de confidentialité.</p>
+
+  <h2>Google Drive</h2>
+  <p>La connexion à Google Drive est facultative. Si vous l'activez :</p>
+  <ul>
+    <li>Plume demande les autorisations <code>openid</code>, <code>email</code> et
+      <code>https://www.googleapis.com/auth/drive.file</code>.</li>
+    <li>Votre adresse e-mail sert uniquement à afficher le compte connecté dans les réglages de Plume.</li>
+    <li><code>drive.file</code> limite Plume aux fichiers qu'il a lui-même créés : un dossier « Plume » et une copie PDF
+      de chacun de vos carnets. Plume ne lit, ne liste et ne modifie aucun autre fichier de votre Drive.</li>
+    <li>Ces copies sont envoyées directement de votre liseuse vers votre Drive ; elles ne transitent par aucun autre serveur.</li>
+    <li>Les données Google ne sont ni vendues, ni partagées, ni utilisées pour de la publicité ou pour entraîner
+      des modèles d'IA.</li>
+  </ul>
+  <p>L'utilisation et le transfert par Plume des informations reçues des API Google respectent les
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">règles relatives aux données
+    utilisateur des services API Google</a>, y compris les exigences d'utilisation limitée (« Limited Use »).</p>
+
+  <h2>Supprimer vos données</h2>
+  <ul>
+    <li>Dans Plume : Réglages → Déconnecter Google Drive révoque l'accès ; supprimer un carnet met aussi sa copie Drive à la corbeille.</li>
+    <li>Depuis votre compte Google : <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li>Désinstaller Plume efface tous les carnets et réglages de la liseuse. Les copies PDF déjà envoyées restent
+      dans votre Drive jusqu'à ce que vous les supprimiez.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Questions : ouvrez un ticket sur <a href="https://github.com/gaby974-cloud/plume/issues">github.com/gaby974-cloud/plume</a>.</p>
+
+  <footer><a href="./">Accueil de Plume</a></footer>
+</main>
+</body>
+</html>

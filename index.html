@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plume</title>
+<meta name="description" content="Plume, carnet de notes manuscrites pour liseuse Boox, avec l'aide de Claude.">
+<style>
+  :root { --bg: #fbfaf7; --ink: #1a1a1a; --muted: #5b5b5b; --accent: #1b4ea3; --line: #d9d6cf; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141414; --ink: #ecebe8; --muted: #a8a6a1; --accent: #8fb0ea; --line: #333; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.6 Georgia, "Times New Roman", serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 44px; margin: 0 0 4px; letter-spacing: -0.5px; }
+  .tag { color: var(--muted); margin: 0 0 32px; font-size: 20px; }
+  h2 { font-size: 22px; margin: 36px 0 8px; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Plume</h1>
+  <p class="tag">Carnet de notes manuscrites pour liseuse Boox, avec l'aide de Claude.</p>
+
+  <p>Plume est une application Android personnelle pour la Boox Note Air C. On y écrit au stylet comme sur du
+    papier, et on peut demander à Claude (Anthropic) de transcrire, résumer, structurer ou compléter ses notes,
+    ou de dessiner un tableau, un schéma ou un calendrier à remplir à la main.</p>
+
+  <h2>Fonctions</h2>
+  <ul>
+    <li>Écriture au stylet à faible latence, stylos, surligneur et gomme ; un mot raturé s'efface.</li>
+    <li>Carnets en pages successives ou en page infinie.</li>
+    <li>Sélection à la zone ou au lasso : déplacer, recolorer, dupliquer, supprimer.</li>
+    <li>Réponses de Claude posées sur la page, sous vos notes.</li>
+    <li>Export PNG et PDF ; copie PDF automatique de chaque carnet sur la liseuse et, si vous le souhaitez,
+      dans un dossier « Plume » de votre Google Drive.</li>
+  </ul>
+
+  <h2>Google Drive</h2>
+  <p>La connexion à Google Drive est facultative. Plume demande seulement l'accès aux fichiers qu'il crée
+    lui-même (autorisation <code>drive.file</code>) : il ne voit ni ne modifie aucun autre fichier de votre Drive.
+    Détails dans les <a href="confidentialite.html">règles de confidentialité</a>.</p>
+
+  <footer>
+    <a href="confidentialite.html">Règles de confidentialité</a> ·
+    <a href="https://github.com/gaby974-cloud/plume">Projet sur GitHub</a>
+  </footer>
+</main>
+</body>
+</html>
