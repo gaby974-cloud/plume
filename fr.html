@@ -23,6 +23,9 @@
   .download { display: inline-block; padding: 14px 26px; border: 3px solid var(--ink); background: var(--ink); color: var(--bg);
     font: bold 20px/1.2 system-ui, sans-serif; text-decoration: none; }
   .small { color: var(--muted); font-size: 16px; }
+  .demo { margin: 8px 0 28px; }
+  .demo video { display: block; width: 100%; max-width: 440px; height: auto; border: 2px solid var(--ink); background: #fff; }
+  .demo p { color: var(--muted); font-size: 16px; margin: 8px 0 0; }
   footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 16px; }
 </style>
 </head>
@@ -35,6 +38,11 @@
   <p>On écrit au stylet comme sur du papier, puis on demande à Claude de transcrire, résumer, structurer ou continuer
     ses notes, ou de dessiner un tableau, un schéma ou un calendrier à remplir à la main. Les réponses se posent sur la page,
     en bleu, sous votre écriture.</p>
+
+  <div class="demo" id="demo">
+    <video src="media/plume-demo.mp4" poster="media/plume-demo.jpg" controls muted playsinline preload="none"></video>
+    <p>Sur une Boox Note Air C : « → Psalm 23 2 columns » devient une mise en page en deux colonnes ; une ligne manuscrite est transcrite.</p>
+  </div>
 
   <p><a class="download" href="https://github.com/gaby974-cloud/plume/releases/latest/download/Plume.apk">Télécharger Plume (APK)</a></p>
   <p class="small">Dernière version et nouveautés : <a href="https://github.com/gaby974-cloud/plume/releases">versions sur GitHub</a>.

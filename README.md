@@ -4,6 +4,10 @@ A handwriting notebook for Boox e-ink tablets, with Claude built in. Interface i
 
 Write with the stylus as on paper, then ask Claude to transcribe, summarize, structure or continue your notes, or to draw a table, diagram or calendar you fill in by hand.
 
+<a href="https://gaby974-cloud.github.io/plume/#demo"><img src="media/plume-demo.jpg" alt="Plume on a Boox Note Air C: a handwritten request answered by Claude with a two-column layout, and a handwritten line transcribed" width="360"></a>
+
+*[Watch the 1-minute demo](https://gaby974-cloud.github.io/plume/#demo) on a Boox Note Air C.*
+
 **[Download the latest APK](https://github.com/gaby974-cloud/plume/releases/latest/download/Plume.apk)** · [Website](https://gaby974-cloud.github.io/plume/) · [Privacy policy](https://gaby974-cloud.github.io/plume/privacy.html)
 
 ## Install
