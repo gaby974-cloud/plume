@@ -93,7 +93,7 @@ Avec « Stylet seul » (par défaut sur Boox), les doigts n'écrivent jamais et 
 | Balayer vers la gauche / la droite | Page suivante (ou nouvelle page) / précédente |
 | Glisser vers le haut / le bas | Faire défiler une page plus haute que l'écran |
 | Appui court | Retirer la zone |
-| Appui long sur un bloc « CLAUDE » puis glisser | Déplacer le bloc |
+| Appui long sur une réponse de Claude (texte bleu) puis glisser | Déplacer la réponse |
 
 Un trait rapide au stylet ne déclenche jamais ces gestes.
 
@@ -101,7 +101,7 @@ Un trait rapide au stylet ne déclenche jamais ces gestes.
 
 La page est un fond blanc uni, sans grille ni points.
 
-Le panneau de réponse (40 % de la hauteur, ou tout l'écran avec « Agrandir ») affiche la réponse au fil de l'eau. Une fois finie, elle se lit page par page avec ‹ Préc. / Suiv. › (pas de défilement continu, qui laisse des traînées sur l'encre). Il propose Arrêter, Relancer, Copier, Fermer, une question de suite, et **Poser sur la page** : le bloc « CLAUDE » se place sous la zone, sinon sous le contenu le plus bas, en allongeant la page si besoin.
+Le panneau de réponse (40 % de la hauteur, ou tout l'écran avec « Agrandir ») affiche la réponse au fil de l'eau. Une fois finie, elle se lit page par page avec ‹ Préc. / Suiv. › (pas de défilement continu, qui laisse des traînées sur l'encre). Il propose Arrêter, Relancer, Copier, Fermer, une question de suite, et **Poser sur la page** : la réponse, en bleu, se place sous la zone, sinon sous le contenu le plus bas, en allongeant la page si besoin.
 
 En mode Auto, écrire par exemple `→ résume`, `-> traduis en anglais` ou `@claude …` en bas de page : Claude exécute la consigne sans la commenter. **Sans consigne identifiable, Auto transcrit l'écriture manuscrite en texte**, en gardant sa structure et sans recopier ce que Claude a déjà posé.
 
@@ -166,7 +166,7 @@ app/src/main/java/com/alphateam/carnetencre/
 │   ├── PageView.kt        SurfaceView de la page : rendu, gomme, zone, déplacement des blocs, mode dégradé
 │   └── OnyxPen.kt         Enveloppe du SDK Onyx (TouchHelper, EpdController, rafraîchissement GC)
 ├── model/                 Éléments (traits, blocs texte), annuler/rétablir, encodage compact, effacement par rature
-├── render/                Rendu des traits (pression, couleur, surligneur sous l'encre) et des blocs « CLAUDE »
+├── render/                Rendu des traits (pression, couleur, surligneur sous l'encre) et des réponses de Claude (texte bleu, trait à gauche)
 ├── claude/                Appel streaming SSE à l'API Messages, modes
 ├── data/                  Room (Notebook, Page, Element, Answer), réglages chiffrés
 ├── export/                PNG, PDF, partage et Téléchargements

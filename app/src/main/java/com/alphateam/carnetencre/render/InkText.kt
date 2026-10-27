@@ -12,32 +12,23 @@ import androidx.core.content.res.ResourcesCompat
 import com.alphateam.carnetencre.R
 import com.alphateam.carnetencre.model.TextBlock
 
-/** Mise en page des blocs « CLAUDE » posés sur la page, en unités de page. */
+/** Mise en page des réponses de Claude posées sur la page (texte bleu, trait bleu à gauche), en unités de page. */
 object InkText {
     const val CLAUDE_BLUE = 0xFF1B4EA3.toInt()
-    const val LABEL = "CLAUDE"
 
     private const val PAD = 18f
     private const val BAR = 5f
-    private const val LABEL_SIZE = 19f
     private const val BODY_SIZE = 29f
-    private const val GAP = 10f
 
     private val bodyPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
         color = CLAUDE_BLUE
         textSize = BODY_SIZE
-    }
-    private val labelPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = CLAUDE_BLUE
-        textSize = LABEL_SIZE
-        letterSpacing = 0.12f
     }
     private val barPaint = Paint().apply { color = CLAUDE_BLUE }
     private val cache = LruCache<String, StaticLayout>(48)
 
     fun init(context: Context) {
         bodyPaint.typeface = ResourcesCompat.getFont(context, R.font.literata) ?: Typeface.SERIF
-        labelPaint.typeface = ResourcesCompat.getFont(context, R.font.atkinson_bold) ?: Typeface.DEFAULT_BOLD
         cache.evictAll()
     }
 
@@ -56,17 +47,16 @@ object InkText {
     }
 
     fun blockHeight(text: String, width: Float): Float =
-        PAD + LABEL_SIZE + GAP + layout(text, width).height + PAD
+        PAD + layout(text, width).height + PAD
 
     @Synchronized
     fun draw(canvas: Canvas, block: TextBlock) {
         val l = layout(block.text, block.w)
-        val h = PAD + LABEL_SIZE + GAP + l.height + PAD
+        val h = PAD + l.height + PAD
         canvas.drawRect(block.x, block.y, block.x + BAR, block.y + h, barPaint)
         val left = block.x + BAR + PAD
-        canvas.drawText(LABEL, left, block.y + PAD + LABEL_SIZE * 0.85f, labelPaint)
         canvas.save()
-        canvas.translate(left, block.y + PAD + LABEL_SIZE + GAP)
+        canvas.translate(left, block.y + PAD)
         l.draw(canvas)
         canvas.restore()
     }

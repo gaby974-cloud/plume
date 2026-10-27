@@ -75,7 +75,7 @@ sealed class Block : PageElement() {
     fun contains(px: Float, py: Float): Boolean = px in x..(x + w) && py in y..(y + height)
 }
 
-/** Réponse de Claude posée sur la page : texte en encre bleue, étiqueté « CLAUDE ». */
+/** Réponse de Claude posée sur la page : texte en encre bleue, avec un trait bleu à gauche. */
 class TextBlock(
     override val id: String,
     override var z: Int,
